@@ -1,16 +1,44 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        flex-direction: column;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+
+      h1 {
+        font-weight: normal;
+      }
+
+      #days {
+        font-weight: bold;
+        color: red;
+      }
+    </style>
   </head>
   <body>
-    Day <span id="days"></span> of waiting for mom on Signal
-
+    <h1>Day <span id="days"></span> of waiting for mom on Signal</h1>
+    <img src="mom.jpg">
     <script>
       const today = new Date();
       const start = new Date('2021-01-29');
-      const daysWaiting = Math.ceil(today.getTime() - start.getTime() / (1000 * 60 * 60 * 24));
+      const daysWaiting = Math.ceil((today.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
       document.querySelector('#days').innerText = daysWaiting;
-      document.title = `Day ${daysWaiting} of waiting for mom on Signal`'
+      document.title = `Day ${daysWaiting} of waiting for mom on Signal`;
     </script>
   </body>
 </html>

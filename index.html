@@ -1,9 +1,15 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
       html {
         height: 100%;
+        font-size: 16px;
+        background: #e3e3e3;
       }
 
       body {
@@ -14,10 +20,12 @@
         align-items: center;
         font-family: sans-serif;
         flex-direction: column;
+        padding: 0 2rem;
       }
 
       img {
         border-radius: 50%;
+        width: 100%;
       }
 
       h1 {
@@ -32,8 +40,8 @@
     </style>
   </head>
   <body>
-    <h1>Day <span id="days"></span> of waiting for mom on Signal</h1>
-    <img src="mom.jpg">
+    <h1 class="animate__animated animate__bounceInDown">Day <span id="days"></span> of waiting for mom on Signal</h1>
+    <img src="mom.jpg" class="animate__animated animate__bounceInUp">
     <script>
       const today = new Date();
       const start = new Date('2021-01-29');
